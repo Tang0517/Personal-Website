@@ -10,7 +10,7 @@
 }
 
 body {
-  background: #f4f4f4;
+  background: #ffffff;
   color: #000000;
   margin: 0;
   padding: 0;
@@ -172,7 +172,7 @@ header {
 /* MEDIA QUERIES
 ================================================================== */
 
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   
   .grid {
     grid-template-columns: 1fr 1fr;

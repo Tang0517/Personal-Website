@@ -1,0 +1,380 @@
+/* TANG DESIGNS */
+
+
+
+
+
+/* BASE STYLES 
+======================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFFFFF;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  line-height: 1.3;
+  font-size: 16px;
+  min-height: 100vh;
+  max-width: 100vw;
+  font-family: 'Imprima', sans-serif;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+main {
+  padding: 1em;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  max-width: 1200px;
+  margin: 2.5em auto;
+}
+
+
+
+
+/* TYPOGRAPHY
+======================================================== */
+
+h1 {
+  font-family: 'Concert One', sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  margin: 0 0 1rem 0;
+}
+
+h2 {
+  margin: 0 0 1rem 0;
+}
+
+h3 {
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+a {
+  color: inherit;
+  transition: all 0.3s;
+}
+
+
+
+
+
+/* HEADER
+======================================================== */
+
+header {
+  background-color: #A89DB5;
+  padding: 0.5rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: auto 5em 5em;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.25rem;
+  color: #000000;
+}
+
+header a:hover {
+  color: #FFFFFF;
+}
+
+header a.active-page {
+  color: #FFFFFF;
+}
+
+.wordmark {
+  color: #D8C79D;
+  font-family: 'Concert One', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+
+
+
+/* FOOTER
+======================================================== */
+
+footer {
+  padding: 1rem 0.5rem;
+  margin: 2rem auto;
+  max-width: 40em;
+  text-align: center;
+}
+
+
+
+
+/* BUTTONS
+======================================================== */
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #D8C79D;
+  text-decoration: none;
+  font-family: 'Concert One', sans-serif;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.button:hover {
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+/* HOME PAGE
+======================================================== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1em;
+}
+
+
+
+
+
+
+
+/* WORK PAGE
+======================================================== */
+
+.work-page main {
+  align-items: start;
+  align-content: start;
+}
+
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  margin: 5em auto;
+}
+
+.filter {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #fdf6f6;
+  text-decoration: none;
+  font-family: 'Concert One', sans-serif;
+  font-weight: 400;
+  transition: all 0.3s;
+  border: 2px solid #D8C79D;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter:hover {
+  background: #D8C79D;
+}
+
+.active-filter {
+  background: #D8C79D;
+}
+
+.work-card {
+  margin: 2em auto;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+.filter-all .work-card {
+  display: block;
+}
+
+.filter-projects .project {
+  display: block;
+}
+
+.filter-branding .branding {
+  display: block;
+}
+
+.filter-freelance .freelance {
+  display: block;
+}
+
+.filter-logos .logo {
+  display: block;
+}
+
+.work-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  max-width: none;
+  max-height: 25em;
+  min-height: 10em;
+  margin-bottom: 0.5em;
+}
+
+.work-slider-images {
+  display: none !important;
+}
+
+.work-overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 100vh;
+  left: 0;
+  opacity: 0%;
+  background-color: #A89DB5;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 2;
+  transition: all 0.3s;
+  padding: 5em 1em;
+}
+
+.overlay-active {
+  overflow: hidden;
+}
+
+.overlay-active .work-overlay {
+  transform: translateY(-100vh);
+  opacity: 100%;
+}
+
+.work-overlay-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.work-slider {
+  display: block;
+  min-height: 80vh;
+  width: 100%;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.work-slider-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  opacity: 0%;
+  transition: all 0.3s;
+}
+
+.work-slider-slide.active-slide {
+  opacity: 100%;
+}
+
+.work-slider-slide img {
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.next-slide {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 4em;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.prev-slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  width: 4em;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+.next-slide img,
+.prev-slide img {
+  padding: 0.5em;
+  transition: all 0.3s;
+  opacity: 50%;
+}
+
+.next-slide:hover img,
+.prev-slide:hover img {
+  background-color: rgb(168 157 181 / 50%);
+  opacity: 100%;
+}
+
+.work-info {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  margin-right: 10em;
+}
+
+.work-close {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  display: block;
+}
+
+
+
+
+
+
+/* CONTACT PAGE
+======================================================== */
+
+.contact-page {
+  background-color: #A89DB5;
+  color: #FFFFFF;
+  position: sticky;
+}

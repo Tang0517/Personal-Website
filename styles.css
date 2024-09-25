@@ -25,7 +25,7 @@ body {
 }
 
 img {
-  max-width: 100%;
+  max-width: 70%;
 }
 
 main {
@@ -155,13 +155,8 @@ footer {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 1em;
+  gap: 6em;
 }
-
-
-
-
-
 
 
 /* WORK PAGE
@@ -377,4 +372,29 @@ footer {
   background-color: #A89DB5;
   color: #FFFFFF;
   position: sticky;
+}
+
+/* FOOTER
+======================================================== */
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f1f1f1; /* Optional: for visibility */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+}
+
+footer img {
+  width: 100px; /* Adjust as needed */
+  height: auto; /* Adjust as needed */
+  object-fit: contain; /* Ensures the image is contained within the specified dimensions */
+  margin-bottom: auto;
+  vertical-align: middle; /* Aligns the image vertically in the footer */
+  margin: auto; /* Centers the image horizontally */
 }
